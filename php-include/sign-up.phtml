@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BLOG | Inscription</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+	</head>
+	<body>
+        <div class="wrap">
+            <div class="menu-wrap">
+                <?php include('./php-include/nav.phtml'); ?>
+                <header class="showcase">
+                    <div class="container showcase-inner">
+                        <h1>Inscription</h1>
+                        <form action="sign-up.php" method="post" class="formLogin">
+                            <div>
+                                <input type="text" name="mail" placeholder="Adresse mail"/>
+                            </div>
+                            <div>
+                                <input type="password" name="password" placeholder="Mot de passe"/>
+                            </div>
+                            <button type="submit" class="btn">S'inscrire'</button>
+                            <p>Vous avez un compte ? </p>
+                            <div> 
+                                <a href="../index.php">Connectez-vous</a>
+                            </div>
+                            
+                        </form>
+                        <?php if(isset($erreur)): ?><p class="erreur"><?= $erreur ?></p><?php endif?>
+                    </div>
+                </header>
+            </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+
+<input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                    <div class="menu">
+                        <div>
+                            <div>
+                                <ul>
+                                    <?php if(array_key_exists('authentification', $_SESSION)): ?>
+                                        <li><a class="nav-link" href="../dashboard.php">Mon compte</a></li>
+                                        <li><a class="nav-link" href="../logout.php">Deconnexion</a></li>
+                                    <?php else : ?>
+                                        <li><a class="nav-link" href="../sign-up.php">Inscription</a></li>
+                                        <li><a class="nav-link" href="../index.php">Connexion</a></li>
+                                    <?php endif ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
